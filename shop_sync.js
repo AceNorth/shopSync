@@ -80,6 +80,24 @@ async function shopSync(shopIds) {
             return listing.listing_id + ' "' + listing.title + '"';
           });
 
+          /**
+            * Comment out lines 71-81 and uncomment the ones below
+            * to manually test the comparison functions and output.
+            * Etsy stores don't change their listings very often.
+          */
+         
+          // const previousListingTitles = [
+          //   "Crab Hat",
+          //   "Dab Hat",
+          //   "Lab Hat",
+          // ]
+
+          // const newListingTitles = [
+          //   "Crab Hat",
+          //   "Dab Hat",
+          //   "Little Baby Duck",
+          // ]
+
           const removedListingTitles = previousListingTitles.filter(x => !newListingTitles.includes(x));
           removedListingTitles.forEach(title => {
             outputString += `\n- removed listing ${title}`;
