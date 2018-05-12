@@ -1,0 +1,7 @@
+# Logs and databases #
+######################
+data/*.json
+
+# Environment variables #
+#########################
+*.env
