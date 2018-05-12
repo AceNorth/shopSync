@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
-const { shopSync } = require('./index');
+const { shopSync } = require('./shop_sync');
 
 app.use(bodyParser.json());
 
