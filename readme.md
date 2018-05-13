@@ -8,9 +8,11 @@ https://www.etsy.com/developers/documentation/getting_started/register
 
 To run:
 
-1) Type ```node app.js```
+1) Clone the repository and ```npm install```.
 
-2) Make a POST request to ```localhost:3000/rpc/sync_stores```
+2) Type ```node app.js```
+
+3) Make a POST request to ```localhost:3000/rpc/sync_stores```
 
 In the body, include a list (array) of etsy store IDs. I've been using this test body:
 
@@ -20,9 +22,9 @@ In the body, include a list (array) of etsy store IDs. I've been using this test
 
 ...but you can find your own shopIds at etsy's /shops/ endpoint: https://www.etsy.com/developers/documentation/reference/shop#method_findallshops
 
-3) The app will log the listings for each store in the /data folder, as a set of JSON files labeled according to their shop ID.
+4) The app will log the listings for each store in the /data folder, as a set of JSON files labeled according to their shop ID.
 
-4) If you make repeat requests using some of the same storeIds, the JSON files will be updated according to the current state of each store. In addition, the app will log any changes to the listings in those stores like so:
+5) If you make repeat requests using some of the same storeIds, the JSON files will be updated according to the current state of each store. In addition, the app will log any changes to the listings in those stores like so:
 
 ```
 Shop ID 234234
